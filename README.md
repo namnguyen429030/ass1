@@ -1,10 +1,5 @@
-bai nhom asignment PRF
-các ô cần chú thích gì cứ ghi đây nhé
-có gi ghi xong thì kéo xuống dưới ấn commit change là dc
-
-t sẽ khai báo luôn một mảng struct trong code luôn nhé
-sau đấy mình sẽ phân tích từng hàm con kia ra xem từng mức độ rồi phân công là dc
-
-edit duoc roi nay
-ngonnnnnn
-Phúc đây- okayyy luôn ô
+Như vậy là mn đã có thể edit dc hết trên này rồi
+-
+vậy chú thích các danh mục các brau viết ở đây nhé
+-
+những gì update ở trong code thì mn sẽ tạo 1 file update của mình và ghi vào đấy, còn bên code thì // chú thích vào phần mình đã sửa cũng okay luôn
