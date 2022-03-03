@@ -63,7 +63,7 @@ typedef struct ng
 	char first_name[10];
 	char last_name[25];
 	char company[40];
-	int phone_number;
+	char phone_number[10];
 	char email[50];
 	char working_address[100];
 	char home_address[100];
