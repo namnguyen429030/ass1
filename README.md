@@ -6,10 +6,9 @@ t sẽ khai báo luôn một mảng struct trong code luôn nhé
 sau đấy mình sẽ phân tích từng hàm con kia ra xem từng mức độ rồi phân công là dc
 
 edit duoc roi nay
-ngonnnnnnn
+ngonnnnnn
+Phúc đây
 
-t phai pull request trc thi moi dc as
-uyt8
 
 t vẫn ko add dc ô Phúc vào, ô Nam xem dc cái này thì send help với =((
 
