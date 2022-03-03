@@ -7,10 +7,4 @@ sau đấy mình sẽ phân tích từng hàm con kia ra xem từng mức độ 
 
 edit duoc roi nay
 ngonnnnnn
-Phúc đây
-
-
-t vẫn ko add dc ô Phúc vào, ô Nam xem dc cái này thì send help với =((
-
-
-ưew
+Phúc đây- okayyy luôn ô
