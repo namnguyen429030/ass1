@@ -72,6 +72,8 @@ typedef struct ng
 }person;
 
 
+//khai bao bien toan cuc
+person man[1000];
 
 int main()
 {
