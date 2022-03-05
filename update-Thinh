@@ -9,3 +9,8 @@
 trong dó có cả phần nhập liệu sai và sửa
 
 - đã trả về được số lượng và dữ liệu của mảng
+
+Nam:
+  -add hàm xóa và tìm kiếm theo tên và số điện thoại
+  -chưa test được code do các phần khác bị lỗi
+  -chưa biết cách in ra dữ liệu sau khi xóa
