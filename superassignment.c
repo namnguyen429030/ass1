@@ -46,9 +46,11 @@
 void print_menu();
 void add_contact();
 void edit_contact();
-void delete_contact();
+void delete_number();
+void delete_name();
 // các hàm thêm
-void search_contact();
+void search_number();
+void search_name();
 void list_month();
 void list_all();
 void inputPhone();
@@ -111,10 +113,46 @@ int main()
 				edit_contact();
 				break;
 			case '3':
-				delete_contact();
+                		char del;
+                		printf("Enter 1 to delete by number/Enter 2 to delete by name: ");
+                		scanf("%d",&del);
+                		switch(del)
+                		{
+                    			case '1':
+                        			char number[100];
+                        			printf("Enter number you want to delete: ");
+                        			scanf("%c",&number);
+                        			delete_number(man,soluong,number);
+                        		//o day dien ham hien thi lai cai contact keeper
+                    			case '2':
+                        			char fn[20],ln[50];   
+                        			printf("Enter first name you want to delete: ");
+                        			scanf("%c",&fn);
+                        			printf("Enter last name you want to delete: ");
+                        			scanf("%c",%ln);
+                        			delete_name(man,soluong,fn,ln);
+                        		//o day dien ham hien thi lai cai contact keeper
+                		}
 				break;
 			case '4':
-				search_contact();
+                		char search;
+                		printf("Enter 1 to search by number/Enter 2 to search by name: ");
+				scanf("%d",&search);
+                		switch(del)
+                		{
+                    			case '1':
+                        			char number[100];
+                       				printf("Enter number you want to search: ");
+                        			scanf("%c",&number);
+                        			search_number(man,soluong,number);
+                    			case '2':
+                       				char fn[20],ln[50];   
+                        			printf("Enter first name you want to search: ");
+                        			scanf("%c",&fn);
+                        			printf("Enter last name you want to search: ");
+                        			scanf("%c",%ln);
+                        			search_name(man,soluong,fn,ln);
+                		}
 				break;
 			case '5':
 				list_all(man, soluong);
@@ -261,15 +299,51 @@ void edit_contact()
 }
 
 
-void delete_contact()
+void delete_number(person man[],int &n,char number[])
 {
-	printf("Write your code here to delete contact.");
+    for(int i=0;i<n;i++)
+    {
+        for(int j=i+1;j<n;j++)
+        {
+            if(strcmp(man[i].phone_number,number)==0)
+                man[i]=man[j];
+        }
+        n-=1;
+        return;
+    }
+}
+void delete_name(person man[],int &n,char fn[],char ln[] )
+{
+    for(int i=0;i<n;i++)
+    {
+        for(int j=i+1;j<n;j++)
+        {
+            if(strcmp(man[i].first_name,fn)==0 && strcmp(man[i].last_name,ln)==0 )
+                man[i]=man[j];
+        }
+        n-=1;
+        return;
+    }
 }
 
-//ham them
-void search_contact()
+void search_number(person man[],int &n,char number[])
 {
-	printf("Write your code here to delete contact.");
+	for(int i=0;i<n;i++)
+        if(strcmp(man[i].phone_number,number)==0)
+            printf("%10s %-20s - works in: %-20s - address: %s\n     Email: %-25s - Phone: %s - Birthday:%d/%d/%d\n     Home address: %s\n"
+ 			,man[i].first_name, man[i].last_name, man[i].company,man[i].working_address,man[i].email, man[i].phone_number,man[i].birday.date,man[i].birday.month,man[i].birday.year,man[i].home_address);
+        else
+            printf("Not found");
+}
+
+void search_name(person man[],int &n,char fn[],char ln[] )
+{
+    for(int i=0;i<n;i++)
+        if(strcmp(man[i].first_name,fn)==0 && strcmp(man[i].last_name,ln)==0)
+            printf("%10s %-20s - works in: %-20s - address: %s\n     Email: %-25s - Phone: %s - Birthday:%d/%d/%d\n     Home address: %s\n"
+ 			,man[i].first_name, man[i].last_name, man[i].company,man[i].working_address,man[i].email, man[i].phone_number,man[i].birday.date,man[i].birday.month,man[i].birday.year,man[i].home_address);
+        else
+            printf("Not found");
 }
 
 void list_month(person man[], int soluong)
